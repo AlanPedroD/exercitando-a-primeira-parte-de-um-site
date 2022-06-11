@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    height: 120px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 990px;
+    padding-top: 5px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.logo img{
+    margin-right: 20px;
+}
+
+.logo a{
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s;
+}
+
+.logo a:hover{
+    color: #39aae1;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.menu a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #727272;
+    transition: 0.3s;
+}
+
+.menu .active, .menu a:hover{
+    background-color: #39aae1;
+    color: #fff;
+}
+
+#banner{
+    display: flex;
+    justify-content: center;
+    background-image: url(../image/imagem-principal-tamplate.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 670px;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.banner-headline{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.banner-headline h1{
+    color: #fff;
+    font-size: 70px;
+    text-shadow: 0px 1px 0px #555555;
+    margin: 0;
+    padding: 0;
+    max-width: 350px;
+}
+.banner-headline h2{
+    color: #fff;
+    font-size: 21px;
+    text-shadow: 0px 1px 0px #555555;
+    margin: 0;
+    padding: 0;
+    max-width: 350px;
+    margin-top: 30px;
+}
+
+.banner-options{
+    height: 210px;
+    display: flex;
+    color: #fff;
+}
+
+.banner-1, .banner-2, .banner-3{
+    flex: 1;
+    padding: 20px;
+}
+
+.banner-1{
+    background-color: #39aae1;
+}
+.banner-2{
+    background-color: #0079c7;
+}
+.banner-3{
+    background-color: #2b4c99;
+}
+
+.banner-title{
+    font-size: 21px;
+}
+
+.banner-descricao, .horarios{
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.banner-options a{
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 5px;
+    font-size: 12px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.banner-options a:hover{
+    color: #000;
+}
+
+.horarios{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.535);
+    padding-bottom: 10px;
+}
+
+
+@media (max-width: 915px){
+    header .container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu nav ul{
+        margin-top: 0px;
+    }
+    .menu a{
+        padding: 10px;
+    }
+}
+
+@media (max-width: 706px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        width: 100%;
+    }
+
+    .menu nav{
+        justify-content: center;
+        align-items: center;
+    }
+    .menu ul{
+        display: block;
+        align-items: center;
+        font-size: 12px;
+    }
+    .menu ul li a{
+        padding: 0px;
+        margin: 0px;
+        padding-top: 1px;
+    }
+    .banner-1, .banner-2, .banner-3{
+        padding: 5px;
+        width: 100%;
+    }
+    
+    .banner-descricao p{
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
+    .banner-descricao a{
+        margin: 0;
+        padding: 0;
+    }
+    .banner-title{
+        font-size: 16px;
+    }
+    .banner-headline h1{
+        font-size: 50px;
+    }
+
+   .banner-descricao, .banner-descricao a{
+       margin-bottom: 10px;
+   }
+
+   .banner-options{
+       height: 180px;
+   }
+}
+
+@media (max-width: 375px){
+    .banner-options{
+        flex: 1;
+        flex-direction: column;
+        padding: 5px 5px 0px 0px;
+    }
+    .banner-headline h1{
+        font-size: 30px;
+    }
+    .banner-headline h2{
+        font-size: 18px;
+    }
+    .banner-options p{
+        font-size: 10px;
+    }
+}
